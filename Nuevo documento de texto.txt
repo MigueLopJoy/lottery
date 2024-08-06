@@ -1,0 +1,46 @@
+Features:
+
+ - Authentication (Para asociaciones):
+  - Login
+  - Register
+  - Email Validation
+
+ - Features para asociaciones registradas:
+  - Creación de sorteos:
+   - Título
+   - Descripción
+   - Objetivo de recaudación
+   - Número de boletos
+   - Precio del boleto
+  - Modificación y eliminación de sorteos
+
+ - Features para usuarios:
+  - Los usuarios no necesitan estar registrados
+  - Ver sorteos de una asociación (página de asociación)
+  - Acceder a un sorteo en particular (página de sorteo)
+  - Comprar cantidad de boletos elegida:
+   - Introducir datos personales
+   - Pago con tarjeta de crédito o paypal (pasarela de pago)
+  - Envío de boleto por correo
+
+
+Microservices:
+ - Config server
+ - Discovery server
+ - Gateway
+ - Authentication
+ - Associations management
+ - Users
+ - Raffles
+ - Payment
+ - Notifications
+
+Entities:
+ - Association
+  - Address
+ - Raffle
+ - Ticket
+ - Order
+ - Payment
+ - Notification
+ - User
