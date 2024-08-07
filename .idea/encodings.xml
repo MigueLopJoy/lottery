@@ -9,5 +9,7 @@
     <file url="file://$PROJECT_DIR$/services/customers/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/discovery/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/services/discovery/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/raffles/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/services/raffles/src/main/resources" charset="UTF-8" />
   </component>
 </project>

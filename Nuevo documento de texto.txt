@@ -58,3 +58,7 @@ Customer:
 
 
 
+Application flow:
+ - Asociación crea sorteo
+ - Customer compra tickets
+ - Enviar confirmación de pago

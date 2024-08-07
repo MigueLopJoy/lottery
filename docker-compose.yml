@@ -9,24 +9,44 @@ services:
     ports:
       - 27017:27017
 
-  mongo-express:
+  mongo-express-container:
     image: mongo-express
     container_name: mongo-express-container
     restart: always
+    depends_on:
+      - mongodb-container
     ports:
       - 8081:8081
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=miguel
       - ME_CONFIG_MONGODB_ADMINPASSWORD=1234
-      - ME_CONFIG_MONGODB_SERVER=mongodb
+      - ME_CONFIG_MONGODB_SERVER=mongodb-container
 
   mysql-container:
     image: mysql
     container_name: mysql-container
     environment:
       - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_DATABASE=docker-app
       - MYSQL_USER=miguel
       - MYSQL_PASSWORD=1234
     ports:
       - "3306:3306"
+
+  phpMyAdmin-container:
+    image: phpmyadmin
+    container_name: phpMyAdmin-container
+    depends_on:
+      - mysql-container
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - PMA_HOST=mysql-container
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=1234
+
+
+
+
+
+

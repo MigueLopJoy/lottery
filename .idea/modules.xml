@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/services/associations/associations.iml" filepath="$PROJECT_DIR$/services/associations/associations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/services/config-server/config-server.iml" filepath="$PROJECT_DIR$/services/config-server/config-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/services/customers/customers.iml" filepath="$PROJECT_DIR$/services/customers/customers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/services/discovery/discovery.iml" filepath="$PROJECT_DIR$/services/discovery/discovery.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lottery.iml" filepath="$PROJECT_DIR$/.idea/lottery.iml" />
     </modules>
   </component>
