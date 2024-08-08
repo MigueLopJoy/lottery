@@ -1,12 +1,17 @@
 package com.miguel.raffles.Raffles;
 
-
-import com.miguel.raffles.Tickets.RaffleTicketsCreationRequest;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.miguel.raffles.Tickets.RaffleTicketsResponse;
+import com.miguel.raffles.Tickets.TicketResponse;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 
-public record RaffleCreationRequest(
+@Builder
+public record RaffleResponse(
+
+        Integer id,
 
         String title,
 
@@ -20,9 +25,8 @@ public record RaffleCreationRequest(
 
         Set<String> photoUrls,
 
-        RaffleTicketsCreationRequest ticketsInfo,
+        Set<RaffleTicketsResponse> tickets,
 
         Integer associationId
-
 ) {
 }
