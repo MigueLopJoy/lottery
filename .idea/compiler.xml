@@ -10,6 +10,7 @@
         <module name="associations" />
         <module name="config-server" />
         <module name="raffles" />
+        <module name="orders" />
         <module name="customers" />
         <module name="discovery" />
       </profile>
@@ -21,6 +22,7 @@
       <module name="config-server" options="-parameters" />
       <module name="customers" options="-parameters" />
       <module name="discovery" options="-parameters" />
+      <module name="orders" options="-parameters" />
       <module name="raffles" options="-parameters" />
     </option>
   </component>

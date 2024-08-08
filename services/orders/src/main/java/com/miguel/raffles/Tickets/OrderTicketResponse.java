@@ -1,14 +1,9 @@
 package com.miguel.raffles.Tickets;
 
-import com.miguel.raffles.Raffles.RaffleResponse;
-import lombok.Builder;
-
-
-@Builder
-public record TicketResponse(
+public record OrderTicketResponse(
         Integer id,
 
-        RaffleResponse raffle,
+        Integer raffleId,
 
         Long ticketNumber,
 
@@ -17,4 +12,5 @@ public record TicketResponse(
         Boolean sold,
 
         Integer customerId
-) { }
+) {
+}

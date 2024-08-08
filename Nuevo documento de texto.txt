@@ -60,17 +60,13 @@ Entities:
 
 
 
-Customer:
- - Customer compra ticket
- - Revisar existencia de customer en la base de datos
- - Almacenar información de usuario en base de datos si no existe
- - Recuperar customer
- - Notificación de compra a customer
+Proceso de compra:
+ - Recibo orden de compra (la orden de compra incluye id del ticket y su número).
 
 
 
 
-Application flow:
- - Asociación crea sorteo
- - Customer compra tickets
- - Enviar confirmación de pago
+
+
+
+

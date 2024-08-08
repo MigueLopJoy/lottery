@@ -1,61 +1,37 @@
 services:
 
-  mongodb:
+  customers:
     image: mongo
-    container_name: mongo_db
+    container_name: customers_db
     ports:
-      - 27017:27017
+      - "27017:27017"
     volumes:
       - mongo:/data
     environment:
       - MONGO_INITDB_ROOT_USERNAME=miguel
       - MONGO_INITDB_ROOT_PASSWORD=1234
 
-  mongo-express:
-    image: mongo-express
-    container_name: mongo_express
-    restart: always
-    ports:
-      - 8081:8081
-    environment:
-      - ME_CONFIG_MONGODB_ADMINUSERNAME=miguel
-      - ME_CONFIG_MONGODB_ADMINPASSWORD=1234
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-
-  mysql:
-    image: mysql
-    container_name: mysql_db
-    environment:
-      - MYSQL_ROOT_PASSWORD=1234
-      - MYSQL_USER=miguel
-      - MYSQL_PASSWORD=1234
-    ports:
-      - "3306:3306"
-
-  associations_db:
+  associations:
     image: mysql
     container_name: associations_db
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: associations
-      MYSQL_USER: miguel
-      MYSQL_PASSWORD: 1234
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=associations
+      - MYSQL_USER=miguel
+      - MYSQL_PASSWORD=1234
     ports:
       - "33061:3306"
 
-
-  phpMyAdmin:
-    image: phpmyadmin
-    container_name: phpMydmin
-    depends_on:
-      - mysql
-    restart: always
-    ports:
-      - "80:80"
+  raffles:
+    image: mysql
+    container_name: raffles_db
     environment:
-      - PMA_HOST=mysql_db
-      - PMA_PORT=3306
       - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=raffles
+      - MYSQL_USER=miguel
+      - MYSQL_PASSWORD=1234
+    ports:
+      - "33062:3306"
 
 volumes:
   mongo:

@@ -1,11 +1,11 @@
 package com.miguel.raffles.Orders;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.miguel.raffles.OrderLines.OrderLine;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -20,8 +20,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
-    private Integer customerId;
+    private String customerId;
 
-    private Set<Ticket> tickets;
+    @OneToMany(mappedBy = "order")
+    private Set<Integer> ticketsIds;
+
+    @CreatedDate
+    @Column(updatable = false, nullable = false)
+    private LocalDateTime createdDate;
 
 }
