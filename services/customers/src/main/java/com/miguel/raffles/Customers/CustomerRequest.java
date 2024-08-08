@@ -6,11 +6,13 @@ import jakarta.validation.constraints.NotNull;
 
 public record CustomerRequest(
 
+        String id,
+
         @NotBlank(message = "Firstname should not be blank")
-        String firstName,
+        String firstname,
 
         @NotBlank(message = "Lastname should not be blank")
-        String lastName,
+        String lastname,
 
         @NotBlank(message = "Email should not be blank")
         String email,
@@ -19,6 +21,6 @@ public record CustomerRequest(
         String phoneNumber,
 
         @NotNull
-        AddressRequest addressRequest
+        AddressRequest address
 ) {
 }

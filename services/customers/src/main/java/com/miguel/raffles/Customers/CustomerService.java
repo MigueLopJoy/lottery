@@ -1,6 +1,5 @@
 package com.miguel.raffles.Customers;
 
-import com.miguel.raffles.Address.AddressMapper;
 import com.miguel.raffles.Exceptions.CustomExceptions.CustomerNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

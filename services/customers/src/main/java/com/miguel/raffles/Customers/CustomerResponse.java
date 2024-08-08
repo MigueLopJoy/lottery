@@ -8,15 +8,15 @@ public record CustomerResponse(
 
         String id,
 
-        String firstName,
+        String firstname,
 
-        String lastName,
+        String lastname,
 
         String email,
 
         String phoneNumber,
 
-        AddressResponse addressResponse
+        AddressResponse address
 
 ) {
 }

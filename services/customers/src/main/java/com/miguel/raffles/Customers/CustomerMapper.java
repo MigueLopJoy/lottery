@@ -13,13 +13,14 @@ public class CustomerMapper {
 
     public Customer toCustomer(CustomerRequest request) {
         return Customer.builder()
-                .fistName(request.firstName())
-                .lastname(request.lastName())
+                .id(request.id())
+                .firstname(request.firstname())
+                .lastname(request.lastname())
                 .email(request.email())
                 .phoneNumber(request.phoneNumber())
                 .address(
                         addressMapper.toAddress(
-                                request.addressRequest()
+                                request.address()
                         )
                 )
                 .build();
@@ -28,11 +29,11 @@ public class CustomerMapper {
     public CustomerResponse fromCustomer(Customer customer) {
         return CustomerResponse.builder()
                 .id(customer.getId())
-                .firstName(customer.getFistName())
-                .lastName(customer.getLastname())
+                .firstname(customer.getFirstname())
+                .lastname(customer.getLastname())
                 .email(customer.getEmail())
                 .phoneNumber(customer.getPhoneNumber())
-                .addressResponse(
+                .address(
                         addressMapper.fromAddress(
                                 customer.getAddress()
                         )

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("api/v1/associations")
+@RequestMapping("/api/v1/associations")
 public class AssociationsController {
 
 

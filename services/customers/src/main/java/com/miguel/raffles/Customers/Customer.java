@@ -16,7 +16,7 @@ public class Customer {
     @Id
     private String id;
 
-    private String fistName;
+    private String firstname;
 
     private String lastname;
 
